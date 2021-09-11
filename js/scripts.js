@@ -2,7 +2,7 @@
 
 $(function () {
     $(".carousel").carousel({ interval: 2000 });
-    $("#carouselButton").click(function () {
+    $("#carouselButton").on("click", function () {
         if ($("#carouselButton").children("i").hasClass("fa-pause")) {
             $(".carousel").carousel("pause");
             $("#carouselButton").children("i").removeClass("fa-pause");
@@ -14,3 +14,11 @@ $(function () {
         }
     });
 });
+
+$("#reserveButton").on("click", function() {
+    $('#reserveModal').modal("show");
+})
+
+$("#loginButton").on("click", function () {
+    $('#loginModal').modal("show");
+})
